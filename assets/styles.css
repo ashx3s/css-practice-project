@@ -1,0 +1,49 @@
+body {
+  background-color: #ffd9da;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 12px 1rem;
+
+  background-color: #89023e;
+  color: ghostwhite;
+}
+.site-logo img {
+  width: 1rem;
+  font-size: 1rem;
+}
+
+.site-nav-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  color: #f8f8ff;
+}
+.site-nav-links a,
+.site-logo a {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: ghostwhite;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+/* TODO: Debug how to properly select all child elements at the same time  */
+.site-nav-links a:hover,
+.site-logo a:hover {
+  color: #ffd9da;
+  fill: #ffd9da;
+  /* TODO: Look into why this doesn't get affected by the transition */
+  text-decoration: underline;
+}
+.site-logo a > svg {
+  width: 25px;
+  height: 25px;
+}
+.site-logo a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
