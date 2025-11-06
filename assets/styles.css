@@ -1,7 +1,25 @@
 body {
   background-color: #ffd9da;
 }
-
+h1 {
+  font-size: clamp(2rem, 10vw, 4rem);
+  font-weight: 700;
+  line-height: 1.5;
+}
+h2 {
+  font-size: clamp(1.8rem, 8vw, 3.8rem);
+  line-height: 2;
+}
+h3 {
+  font-size: clamp(1.6rem, 6vw, 3rem);
+  line-height: 1.5;
+}
+section {
+  margin: 0 1rem;
+}
+article {
+  margin: 12px 0;
+}
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -46,4 +64,62 @@ body {
   display: flex;
   gap: 8px;
   align-items: center;
+}
+
+.hero-section {
+  background-image: url("./images/sea-background-image.jpg");
+  height: 60dvh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section div {
+  backdrop-filter: blur(10px);
+  padding: clamp(2rem, 10vw, 4rem);
+  width: 80vw;
+  border-radius: 2rem;
+}
+
+.hero-section div p {
+  font-size: clamp(1.6rem, 2vw, 2rem);
+}
+.hero-text {
+  text-align: center;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-button {
+  display: block;
+  text-decoration: none;
+  color: ghostwhite;
+  padding: 12px 8px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.primary-button {
+  background-color: #89023e;
+}
+.secondary-button {
+  border: 4px solid ghostwhite;
+  color: ghostwhite;
+}
+
+.card-layout {
+  display: flex;
+  gap: 12px;
+  margin: 0 12px;
+}
+article img {
+  width: 400px;
+}
+.headshot {
+  width: 800px;
 }
