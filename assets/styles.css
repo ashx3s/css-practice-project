@@ -1,5 +1,16 @@
+/* TODO:
+- fix card width at desktop
+- fix alignment between about section and card section -- have clean edges
+- fix centering of headers. verify this is a real bug and not just from my screen share or vscode
+*/
 body {
   background-color: #ffd9da;
+}
+footer {
+  background-color: #1b2021;
+  color: ghostwhite;
+  text-align: center;
+  padding: 2rem;
 }
 h1 {
   font-size: clamp(2rem, 10vw, 4rem);
@@ -11,11 +22,17 @@ h2 {
   line-height: 2;
 }
 h3 {
-  font-size: clamp(1.6rem, 6vw, 3rem);
+  font-size: clamp(1.3rem, 2.5vw, 2.2rem);
   line-height: 1.5;
+  font-weight: 600;
 }
+p {
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
+  line-height: 1.2;
+}
+
 section {
-  margin: 0 1rem;
+  margin: 2rem;
 }
 article {
   margin: 12px 0;
@@ -24,9 +41,7 @@ article {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-
   padding: 12px 1rem;
-
   background-color: #89023e;
   color: ghostwhite;
 }
@@ -34,7 +49,6 @@ article {
   width: 1rem;
   font-size: 1rem;
 }
-
 .site-nav-links {
   display: flex;
   gap: 1rem;
@@ -52,9 +66,11 @@ article {
 .site-nav-links a:hover,
 .site-logo a:hover {
   color: #ffd9da;
-  fill: #ffd9da;
   /* TODO: Look into why this doesn't get affected by the transition */
   text-decoration: underline;
+}
+.site-logo a:hover svg path {
+  fill: #ffd9da;
 }
 .site-logo a > svg {
   width: 25px;
@@ -81,7 +97,6 @@ article {
   width: 80vw;
   border-radius: 2rem;
 }
-
 .hero-section div p {
   font-size: clamp(1.6rem, 2vw, 2rem);
 }
@@ -94,7 +109,6 @@ article {
   align-items: center;
   gap: 12px;
 }
-
 .hero-button {
   display: block;
   text-decoration: none;
@@ -106,20 +120,70 @@ article {
 
 .primary-button {
   background-color: #89023e;
+  border: 4px solid #89023e;
 }
 .secondary-button {
   border: 4px solid ghostwhite;
   color: ghostwhite;
 }
 
+.section-header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: clamp(2rem, 10vw, 4rem);
+}
 .card-layout {
   display: flex;
-  gap: 12px;
-  margin: 0 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80dvw;
+  gap: 1.2rem;
+  margin: 0 auto;
 }
-article img {
-  width: 400px;
+.card {
+  background-color: #ea638c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 65ch;
+  border-radius: 20px;
 }
+.card img {
+  max-width: 320px;
+  height: 380px;
+  /* TODO: decide on bottom border radius inclusion */
+  border-radius: 20px;
+  object-fit: cover;
+}
+.card-text {
+  max-width: 30ch;
+  margin: 1rem 0;
+}
+.card-text h3 {
+  margin-bottom: 4px;
+}
+.card-button {
+  margin: 12px;
+  padding: 4px 8px;
+  text-decoration: none;
+  border-radius: 12px;
+  align-self: end;
+  display: block;
+}
+
+/* TODO: fix button hover */
 .headshot {
-  width: 800px;
+  max-width: 600px;
+  border-radius: 20px;
+}
+.flex-column-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.text-section {
+  max-width: 75ch;
 }

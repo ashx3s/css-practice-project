@@ -12,10 +12,7 @@
 
 
 <body>
-  <!-- TODO: Make Navbar flex layout  -->
-  <!-- Navbar should be sticky -->
   <header class="site-header">
-    <!-- TODO: Decide on if the div is necessary -->
     <div class="site-logo">
       <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path fill="#f8f8ff"
@@ -30,69 +27,61 @@
     </nav>
   </header>
   <main>
-    <!-- add background image -->
     <header class="hero-section">
-      <!-- position content -->
       <div>
         <div class="hero-text">
           <h1>Elvira Studebaker</h1>
           <p>Professional Web Development Services</p>
         </div>
         <div class="hero-buttons">
-          <!-- Style as buttons -->
-          <!-- murrey color for primary, outline for secondary -->
-          <a href="projects.html" class="hero-button secondary-button">My Work</a>
+          <a href="portfolio.html" class="hero-button secondary-button">My Work</a>
           <a href="contact.html" class="hero-button primary-button">Contact</a>
         </div>
       </div>
     </header>
+
     <section>
       <!-- center text  -->
-      <header>
+      <header class="section-header">
         <h2>My Services</h2>
       </header>
       <!-- 3 card layout -->
       <div class="card-layout">
         <!-- flex column -->
-        <article>
-          <!-- import image -->
+        <article class="card">
+          <!-- TODO: Get an image with better aspect ratio for the cards -->
           <img src="./assets/images/ui-ux-design.jpg" alt="Design consultation illustration">
-          <div>
-
+          <div class="card-text">
             <h3>Design Consultation</h3>
             <p>Expert guidance to bring your vision to life with modern, user-focused design principles.</p>
           </div>
-          <div>
-            <!-- button style -->
-            <a href="#">Learn More</a>
-          </div>
+          <a href="#" class="card-button secondary-button">Learn More</a>
         </article>
 
-        <article>
+        <article class="card">
           <img src="./assets/images/elvira-working.jpg" alt="Web building illustration">
-          <h3>Web Building</h3>
-          <p>Custom-built websites tailored to your unique needs, from simple portfolios to complex applications.</p>
-          <a href="#">Learn More</a>
+          <div class="card-text">
+            <h3>Web Building</h3>
+            <p>Custom-built websites tailored to your unique needs, from simple portfolios to complex applications.</p>
+          </div>
+          <a href="#" class="card-button secondary-button">Learn More</a>
         </article>
 
-        <article>
+        <article class="card">
           <img src="./assets/images/servers.jpg" alt="Web hosting illustration">
-          <h3>Web Hosting</h3>
-          <p>Reliable and secure hosting solutions to keep your website running smoothly around the clock.</p>
-          <a href="#">Learn More</a>
+          <div class="card-text">
+            <h3>Web Hosting</h3>
+            <p>Reliable and secure hosting solutions to keep your website running smoothly around the clock.</p>
+          </div>
+          <a href="#" class="card-button secondary-button">Learn More</a>
         </article>
       </div>
     </section>
 
-    <!-- Make section feel like it's in a tile ontop of the background -->
-    <section>
-      <header>
-        <!-- import image -->
-        <img src="./assets/images/elvira-headshot.jpg" alt="Elvira Studebaker professional photo" class="headshot">
+    <section class="flex-column-section">
+
+      <div class="text-section">
         <h2>About Elvira Studebaker</h2>
-      </header>
-      <div>
-        <!-- fix layout width to make it readable -->
         <p>With over a decade of experience in web development and design, I specialize in creating beautiful,
           functional websites that help businesses thrive online. My passion lies in transforming ideas into digital
           experiences that engage users and drive results.</p>
@@ -100,6 +89,9 @@
           you're a startup looking to establish your online presence or an established business seeking to refresh your
           digital identity, I'm here to help bring your vision to life.</p>
         <p>Let's work together to create something exceptional.</p>
+      </div>
+      <div>
+        <img src="./assets/images/elvira-headshot.jpg" alt="Elvira Studebaker professional photo" class="headshot">
       </div>
     </section>
   </main>
